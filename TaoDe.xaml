@@ -1,0 +1,74 @@
+﻿<Window x:Class="QLDE_V2.TaoDe"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QLDE_V2"
+        mc:Ignorable="d"
+        Title="TaoDe" Height="420" Width="330" FontSize="15">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Margin="10,5,10,5">Số câu:</TextBlock>
+        <TextBox x:Name="txtNumber" Grid.Row="0" Grid.Column="1" Margin="10,5,10,5" Width="150" Height="30"></TextBox>
+
+        <TextBlock Grid.Row="1" Grid.Column="0" Margin="10,5,10,5" >Chương:</TextBlock>
+        <ComboBox Grid.Row="1" Grid.Column="1" Margin="10,5,10,5" Height="30" Width="150"
+                   x:Name="cbchuong">
+            <ComboBoxItem>Chương 1</ComboBoxItem>
+            <ComboBoxItem>Chương 2</ComboBoxItem>
+        </ComboBox>
+
+        <TextBlock Grid.Row="2" Grid.Column="0" Margin="10,5,10,5" >Bài:</TextBlock>
+        <ComboBox Grid.Row="2" Grid.Column="1" Margin="10,5,10,5" Height="30" Width="150"
+                   x:Name="cbbai">
+            <ComboBoxItem>Bài 1:Phép cộng</ComboBoxItem>
+            <ComboBoxItem>Bài 2:Phép trừ</ComboBoxItem>
+            <ComboBoxItem>Bài 3:Phép nhân</ComboBoxItem>
+            <ComboBoxItem>Bài 4:Phép chia</ComboBoxItem>
+        </ComboBox>
+
+        <TextBlock Grid.Column="0" Grid.Row="3" Margin="10,5,10,5" >Độ khó:</TextBlock>
+        <ComboBox Grid.Column="1" Grid.Row="3" Margin="10,5,10,5" Height="30" Width="150" 
+                   x:Name="cbdokho">
+            <ComboBoxItem>Dễ</ComboBoxItem>
+            <ComboBoxItem>Trung bình</ComboBoxItem>
+            <ComboBoxItem>Khó</ComboBoxItem>
+        </ComboBox>
+
+        <TextBlock Grid.Row="4" Grid.Column="0" Margin="10,5,10,5" >Kiểu câu hỏi:</TextBlock>
+        <ComboBox Grid.Row="4" Grid.Column="1" Margin="10,5,10,5" Height="30" Width="150" 
+                   x:Name="cbkieucauhoi">
+            <ComboBoxItem>BT thực hành trắc nghiệm</ComboBoxItem>
+            <ComboBoxItem>BT lý thuyết</ComboBoxItem>
+            <ComboBoxItem>BT tự luận</ComboBoxItem>
+        </ComboBox>
+
+        <TextBlock Grid.Row="5" Grid.Column="0" Margin="10,5,10,5">Mã đề:</TextBlock>
+        <TextBox x:Name="txtMaDe" Grid.Row="5" Grid.Column="1" Margin="10,5,10,5" Width="150" Height="30"></TextBox>
+
+        <TextBlock Grid.Row="6" Grid.Column="0" Margin="10,5,10,5">Tên đề:</TextBlock>
+        <TextBox x:Name="txtTenDe" Grid.Row="6" Grid.Column="1" Margin="10,5,10,5" Width="150" Height="30"></TextBox>
+
+        <Button Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="7" Height="30" Width="100" Margin="10,5,10,5"
+                Content="Tạo đề CSDL" x:Name="btTaoDe" Click="btTaoDe_Click" HorizontalAlignment="Center"></Button>
+        <Button Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="7" Height="30" Width="100" Margin="87,41,87,-31"
+                Content="Tạo đề Rand" x:Name="btTaoDeRand" Click="btTaoDeRand_Click"></Button>
+        <Button Grid.Column="1" Grid.Row="7" Height="10" Width="10" Margin="154,26,6,4" Click="Button_Click"/>
+
+        
+    </Grid>
+</Window> 

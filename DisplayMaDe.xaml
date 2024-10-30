@@ -1,0 +1,26 @@
+﻿<Window x:Class="QLDE_V2.DisplayMaDe"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QLDE_V2"
+        mc:Ignorable="d"
+        Title="DisplayMaDe" Height="auto" Width="300">
+    <Grid>
+        <StackPanel>
+            <TextBlock Text="Mã Đề:" FontWeight="Bold" FontSize="16"/>
+            <TextBlock Name="MaDeTextBlock" FontSize="14"/>
+            <ListBox Name="CauHoiListBox">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock Text="{Binding NoiDungCH}" FontSize="14"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <Button Content="Xuất ra Word" Click="ExportButton_Click" Margin="10"/>
+        </StackPanel>
+        
+    </Grid>
+</Window>
